@@ -1,0 +1,395 @@
+body {
+  font-family: 'Patrick Hand', cursive;
+  background: linear-gradient(to bottom, #ffe4ec, #e0bbff);
+  color: #444;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 620px;
+  margin: auto;
+  padding: 15px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.7), 0 0 25px rgba(224, 187, 255, 0.7); /* More visible pastel pink and purple shadow */
+  width: 90%;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+
+.container > * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  background: linear-gradient(to right, #ff8fa3, #a4c2f4, #ffaad4);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -500px;
+  }
+  100% {
+    background-position: 500px;
+  }
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #888;
+}
+
+.delete-btn {
+  transition: transform 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+.section h2, .section h3 {
+  position: relative;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+.timeline-section {
+  margin-top: 20px;
+}
+
+.tat-section {
+  margin-top: 20px;
+}
+
+.wt-section {
+  margin-top: 20px;
+}
+
+.cpu-util-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
+}
+
+input[type="text"], input[type="number"], select {
+  width: 90%;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+button {
+  font-family: inherit;
+  background: #ffc0cb;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 1px 1px 2px #aaa;
+  width: 100%;
+}
+
+button:hover {
+  background: #ffa0b3;
+  animation: popIn 0.2s ease-in-out;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #ffb6c1;
+}
+
+.time-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+  color: #999;
+}
+
+#arrivalTimeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #FFF3FA;
+  border: 2px dashed #E0A0B0;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.arrival-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #FFD6E8;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  min-width: 60px;
+  text-align: center;
+  box-shadow: 2px 2px 6px rgba(255, 182, 193, 0.5);
+  transition: transform 0.2s ease-in-out;
+}
+
+.arrival-block:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.8);
+}
+
+.job-name {
+  font-size: 18px;
+  color: #725e65;
+  margin-bottom: 4px;
+}
+
+.arrival-time {
+  font-size: 14px;
+  color: #8b626a;
+  font-style: italic;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 30px;
+}
+
+.buttons button {
+  width: 45%;
+}
+
+.center-algo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.center-algo label {
+  font-size: 18px;
+  color: rgb(133, 113, 123);
+}
+
+.center-algo select {
+  width: 60%;
+  text-align: center;
+  font-size: 16px;
+}
+
+.job-input-table {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .center-algo select {
+    width: 100%;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+
+  th, td {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  input[type="text"], input[type="number"], select {
+    font-size: 14px;
+  }
+
+  .section h2, .section h3 {
+    text-align: center;
+  }
+
+  #arrivalTimeline {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .arrival-block {
+    min-width: 50px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .gantt-visual-container {
+    padding: 8px;
+    margin-top: 15px;
+  }
+
+  .gantt-block-cute {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+
+  .burst-label {
+    font-size: 12px;
+  }
+
+  .time-tick {
+    font-size: 10px;
+  }
+
+  table {
+    font-size: 12px;
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  th, td {
+    padding: 4px 6px;
+    font-size: 12px;
+    min-width: 70px;
+  }
+
+  input[type="text"], input[type="number"] {
+    width: 100%;
+    font-size: 12px;
+    padding: 3px;
+  }
+}
+
+.gantt-visual-container {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 16px;
+  background: #fff3fa;
+  border: 2px dashed #e0a0b0;
+}
+
+#ganttVisual {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  padding: 8px;
+  font-family: 'Patrick Hand', cursive;
+}
+
+.gantt-block-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.burst-label {
+  font-size: 14px;
+  color: #888;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.gantt-block-cute {
+  background: #ffd6e8;
+  color: #333;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 16px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  min-width: 30px;
+  text-align: center;
+  animation: popIn 0.3s ease-in-out;
+}
+
+.time-tick {
+  font-size: 12px;
+  margin-top: 4px;
+  color: #666;
+}
+
+.gantt-title {
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+  color: #c67ca3;
+  margin: 10px 10px 0 0;
+  font-family: 'Patrick Hand', cursive;
+}
+
+.gantt-chart-section h2 {
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+  color: #494949;
+  margin: 10px 10px 0 0;
+  font-family: 'Patrick Hand', cursive;
+}

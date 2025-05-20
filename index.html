@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   CPU Scheduling
+  </title>
+  <link href="styles.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&amp;display=swap" rel="stylesheet"/>
+  <script defer="" src="script.js">
+  </script>
+   <script src="script.js" defer></script>
+</head>
+ <body>
+  <div class="container">
+   <h1>
+    ࣪𖤐.ᐟ CPU SCHEDULING 𓂃⋆.˚
+    <br/>
+    <span class="subtitle">
+     algorithm
+    </span>
+   </h1>
+   <div class="section center-algo">
+    <label for="algorithm">
+     ❀ Select Scheduling Algorithm ❀
+    </label>
+    <select id="algorithm">
+     <option value="fcfs">
+      First Come, First Serve
+     </option>
+     <option value="sjf">
+      Short Job First
+     </option>
+     <option value="preemptive">
+      Preemptive Priority
+     </option>
+     <option value="nonpreemptive">
+      Non-Preemptive Priority
+     </option>
+    </select>
+   </div>
+   <table class="job-input-table">
+    <thead>
+     <tr>
+      <th>Jobs</th>
+      <th>Arrival Time</th>
+      <th>Burst Time</th>
+      <th>Priority</th>
+     </tr>
+    </thead>
+    <tbody id="jobInputs">
+     <tr>
+      <td>
+       <input placeholder="♡" type="text"/>
+      </td>
+      <td>
+       <input type="number"/>
+      </td>
+      <td>
+       <input type="number"/>
+      </td>
+      <td>
+       <input type="number"/>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <button onclick="addRow()">
+    ➕ Add
+   </button>
+   <div class="section timeline-section">
+    <h2>Timeline</h2>
+    <div id="arrivalTimeline"></div>
+   </div>
+   <div class="section gantt-chart-section">
+    <h2>Gantt Chart</h2>
+    <div class="gantt-visual-container">
+      <div id="ganttVisual"></div>
+    </div>
+   </div>
+   <div class="section tat-section">
+    <h3>
+     Turn Around Time
+    </h3>
+    <div id="tatResults">
+    </div>
+   </div>
+   <div class="section wt-section">
+    <h3>
+     Waiting Time
+    </h3>
+    <div id="wtResults">
+    </div>
+   </div>
+   <div class="section cpu-util-section">
+    <h2>
+     ✿ % of CPU Utilization ✿
+    </h2>
+    <p>
+     <strong>
+      X used:
+     </strong>
+     <span id="cpuUtil">
+      0%
+     </span>
+    </p>
+   </div>
+   <div class="buttons">
+    <button onclick="runScheduling()">
+     ✧ Start ✧
+    </button>
+    <button onclick="resetAll()">
+     Try Again ♡
+    </button>
+   </div>
+   <footer>
+    <p>
+     𖧷 Page 1 / 1 𖧷
+    </p>
+   </footer>
+  </div>
+ </body>
+</html>
